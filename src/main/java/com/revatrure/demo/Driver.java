@@ -100,6 +100,12 @@ public class Driver {
 		
 		System.out.println("11- Please enter J to start a transaction \n");
 		
+		System.out.println("12- Please enter K to client with name marwane buy all available cars \n");
+		
+		System.out.println(	"13- Please enter L to retrive info about client with name marwane and all his cars \"join statement\" \n");
+		
+		System.out.println(	"14- Please enter M to retrive info of all cars currently on service with owner info 'join multiple tables' \n");
+		
 		String[] instructionsStrings = {
 				"1- Please enter  A to turncate cars table \n",
 				"2- Please enter  A+ to force turncate cars table \n",
@@ -111,11 +117,14 @@ public class Driver {
 				"8- Please enter G to cache the clients table  \n",
 				"9- Please enter H to add cars to car table  \n",
 				"10- Please enter I to update car with id 1 to have a red color \n",
-				"11- Please enter J to start a transaction \n"
+				"11- Please enter J to start a transaction \n",
+				"12- Please enter K to client with name marwane buy all available cars \n",
+				"13- Please enter L to retrive info about client with name marwane and all his cars \"join statement\" \n",
+				"14- Please enter M to retrive info of all cars currently on service with owner info 'join multiple tables' \n"
 		};
 		
 		String[] validInputarr = {"A","a", "A+", "a+" ,"B","b", "C", "c", "D", "d" , "E", "e" , "F", "f"
-				, "G", "g", "H", "h", "I", "i", "J", "j"};
+				, "G", "g", "H", "h", "I", "i", "J", "j", "K","k", "L", "l" , "M", "m"};
 	
 		
 		String input = scanner.next();
@@ -307,7 +316,6 @@ public class Driver {
 				serviceRrecod[i] = new Service(car.getId(), client.getId());
 			}
 			
-			
 			// start a transaction 
 				
 			Transaction transaction = new Transaction();
@@ -318,6 +326,8 @@ public class Driver {
 			Savepoint insert = transaction.setSavePoint("insert");
 			
 			List<Object> obj =	transaction.update(Car.class, " price = 10", "car_model = 'honda'");
+			
+			System.out.println(obj);
 			
 			// cancel transaction after save point 
 			transaction.rollBack(insert);
@@ -336,9 +346,62 @@ public class Driver {
 			
 		}
 		
+		if(input.equalsIgnoreCase("K")) {
+			
+			try {
+			
+//			db.addNewCach("rich", dql.getWhere(Client.class, "first_name = 'marwane" ) );
+			
+				List<Client> rich =  dql.getWhere(Client.class,"fisrt_name = 'marwane' " );
+				
+				LinkedList<HashMap<String, Object>> returned =	dql.nativeQuerry("update cars set owner = " + rich.get(0).getId() + "where owner is null returning cars");
+				
+				System.out.println(returned);
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			run();
+			
+		}
 		
 		
+		if(input.equalsIgnoreCase("L")) {
+			
+			try {
+		
+				LinkedList<HashMap<String, Object>> returned =	dql.joinQuerry(Car.class,Client.class , "fisrt_name = 'marwane' ");
+			
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			run();
+			
+		}
+		
+		
+		if(input.equalsIgnoreCase("M")) {
+			
+			try {
+		
+				LinkedList<HashMap<String, Object>> returned =	dql.joinQuerryManyToMany(Service.class, Car.class, Client.class);
+			
+				
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			run();
+			
+		}
 	
+		
 	}
 	
 	
