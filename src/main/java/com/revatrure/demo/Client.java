@@ -28,7 +28,6 @@ public class Client {
 
 	@ConstructorProperties(value = { "client_id",  "fisrt_name" , "last_name" , "age",  "approved" })
 	public Client(int id, String firstName, String lastName, int age, boolean isApproved) {
-		super();
 		this.id = id;
 		this.firstName = firstName;
 		this.lastName = lastName;

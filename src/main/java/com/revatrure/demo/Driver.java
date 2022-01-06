@@ -29,6 +29,7 @@ public class Driver {
 	private static DDL ddl = new DDL();
 	private static DML dml = new DML();
 	private static DQL dql = new DQL();
+
 	private static Scanner scanner  = new Scanner(System.in); 
 
 	public static void main(String[] args)  {
@@ -38,7 +39,7 @@ public class Driver {
 		
 		
 		try {
-			db.addMappedClass(  Client.class,  Car.class , Store.class );
+			db.addMappedClass(  Client.class,  Car.class , Service.class );
 			run();
 		} catch (DdlException e) {
 			// TODO Auto-generated catch block
@@ -95,6 +96,10 @@ public class Driver {
 		
 		System.out.println("9- Please enter H to add cars to car table  \n");
 		
+		System.out.println("10- Please enter I to update car with id 1 to have a red color \n");
+		
+		System.out.println("11- Please enter J to start a transaction \n");
+		
 		String[] instructionsStrings = {
 				"1- Please enter  A to turncate cars table \n",
 				"2- Please enter  A+ to force turncate cars table \n",
@@ -104,11 +109,13 @@ public class Driver {
 				"6- Please enter E to create a table for stores \n",
 				"7- Please enter F to insert clients into clients table \n",
 				"8- Please enter G to cache the clients table  \n",
-				"9- Please enter H to add cars to car table  \n"
+				"9- Please enter H to add cars to car table  \n",
+				"10- Please enter I to update car with id 1 to have a red color \n",
+				"11- Please enter J to start a transaction \n"
 		};
 		
 		String[] validInputarr = {"A","a", "A+", "a+" ,"B","b", "C", "c", "D", "d" , "E", "e" , "F", "f"
-				, "G", "g", "H", "h"};
+				, "G", "g", "H", "h", "I", "i", "J", "j"};
 	
 		
 		String input = scanner.next();
@@ -169,7 +176,7 @@ public class Driver {
 			if(input.equalsIgnoreCase("D")) {
 				
 				try {
-					ddl.dropCascade(Store.class);
+					ddl.dropCascade(Service.class);
 				} catch (DdlException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -183,7 +190,7 @@ public class Driver {
 			if(input.equalsIgnoreCase("E")) {
 				
 				try {
-					ddl.create(Store.class);
+					ddl.create(Service.class);
 				} catch (DdlException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -254,6 +261,81 @@ public class Driver {
 			
 			}
 			
+		if(input.equalsIgnoreCase("I")) {
+				
+				try {
+					
+					
+				Object obj = 	dml.update(Car.class, " color = 'red' ", 10);
+				
+				System.out.println("row updated in the database :" + obj);
+				
+				} catch (SQLException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+				
+				run();
+				
+			}
+			
+		
+		// ****************
+		if(input.equalsIgnoreCase("J")) {
+			
+			try {
+				
+			// add all cars to cache
+			db.addTableToCach(Car.class);
+			
+			System.out.println(db.cache);
+			
+			
+			
+			// retrive cars from the cache 
+			List<Car> carsFromCache = (List<Car>) db.cache.get("cars");			
+			List<Client> clients = (List<Client>) db.cache.get("clients");
+			
+		
+			
+			Service[] serviceRrecod = new Service[4];
+			// some cars come for service and we need to add them to db to keep 
+			// of car and it's owner
+			for(int i = 0 ; i < 4 ; i++) {
+				Car car = carsFromCache.get(i);
+				Client client = clients.get(i);
+				serviceRrecod[i] = new Service(car.getId(), client.getId());
+			}
+			
+			
+			// start a transaction 
+				
+			Transaction transaction = new Transaction();
+			
+			transaction.insert(serviceRrecod);
+			
+			// create a save point
+			Savepoint insert = transaction.setSavePoint("insert");
+			
+			List<Object> obj =	transaction.update(Car.class, " price = 10", "car_model = 'honda'");
+			
+			// cancel transaction after save point 
+			transaction.rollBack(insert);
+			// commit change 
+			transaction.commit();
+			// end the connection 
+			transaction.end();
+			
+			
+			} catch (SQLException | IllegalArgumentException | IllegalAccessException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			
+			run();
+			
+		}
+		
 		
 		
 	

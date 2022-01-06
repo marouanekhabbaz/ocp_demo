@@ -7,12 +7,12 @@ import com.revature.annontation.Id;
 import com.revature.annontation.JoinedColumn;
 
 
-@Entity(tableName = "stores")
-public class Store {
+@Entity(tableName = "services")
+public class Service {
 	
 	
 	
-	public Store(int carId, int personId) {
+	public Service(int carId, int personId) {
 		super();
 		this.carId = carId;
 		this.clientId = personId;

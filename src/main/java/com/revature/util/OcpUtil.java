@@ -1,7 +1,7 @@
 package com.revature.util;
 
 import com.revatrure.demo.Car;
-import com.revatrure.demo.Store;
+import com.revatrure.demo.Service;
 import com.revatrure.demo.Client;
 import com.revature.exception.DdlException;
 import com.revature.util.DataBase;

@@ -22,7 +22,7 @@ public class Car {
 	@Column(columnName="color", dataType = "varchar(50)" , defaultValue = " 'blue' ")
 	private String color;
 	
-	@Column(columnName = "doors", dataType = "INTEGER",  nullable = false)
+	@Column(columnName = "price", dataType = "INTEGER",  nullable = false)
 	private int price ;
 	
 	@ForeignKey(columnName = "owner", joinedColumn = "client_id" , joinedTable = "clients")
@@ -45,8 +45,7 @@ public class Car {
 	
 	
 	@ConstructorProperties(value = { "car_id",  "car_model" , "color" , "doors", "owner" })
-	public Car(int id, String model, String color, int price, int owner) {
-		super();
+	public Car(int id, String model, String color, int price, Integer owner) {
 		this.id = id;
 		this.model = model;
 		this.color = color;
@@ -142,6 +141,15 @@ public class Car {
 		this.notMapped1 = notMapped1;
 	}
 
+
+
+	@Override
+	public String toString() {
+		return "Car [id=" + id + ", model=" + model + ", color=" + color + ", price=" + price + ", owner=" + owner
+				+ "]";
+	}
+
+	
 	
 	
 
