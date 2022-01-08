@@ -31,6 +31,19 @@ public class Driver {
 	private static DQL dql = new DQL();
 
 	private static Scanner scanner  = new Scanner(System.in); 
+	
+	public static final String ANSI_RESET = "\u001B[0m";
+	public static final String ANSI_RED = "\u001B[31m";
+	public static final String ANSI_YELLOW = "\u001B[33m";
+	
+	public static final String ANSI_BLACK = "\u001B[30m";
+	
+	public static final String ANSI_GREEN = "\u001B[32m";
+	
+	public static final String ANSI_BLUE = "\u001B[34m";
+	public static final String ANSI_PURPLE = "\u001B[35m";
+	public static final String ANSI_CYAN = "\u001B[36m";
+	public static final String ANSI_WHITE = "\u001B[37m";
 
 	public static void main(String[] args)  {
 	
@@ -69,14 +82,16 @@ public class Driver {
 		};
 		
 		
+
+		
 		
 		System.out.println(" \n ");
 		
 		System.out.println(" ==================================================================== \n ");
 		
-		System.out.println("Welcome to OCP demo App");
+		System.out.println(ANSI_BLUE +"Welcome to OCP demo App");
 		
-		System.out.println("1- Please enter  A to turncate cars table \n");
+		System.out.println("1- Please enter  A to turncate cars table \n" );
 		
 		System.out.println("2- Please enter  A+ to force turncate cars table \n");
 		
@@ -104,10 +119,10 @@ public class Driver {
 		
 		System.out.println(	"13- Please enter L to retrive info about client with name marwane and all his cars \"join statement\" \n");
 		
-		System.out.println(	"14- Please enter M to retrive info of all cars currently on service with owner info 'join multiple tables' \n");
+		System.out.println(	"14- Please enter M to retrive info of all cars currently on service with owner info 'join multiple tables' \n"  +  ANSI_RESET);
 		
 		String[] instructionsStrings = {
-				"1- Please enter  A to turncate cars table \n",
+				ANSI_BLUE + "1- Please enter  A to turncate cars table \n",
 				"2- Please enter  A+ to force turncate cars table \n",
 				"3- Please enter  B to alter persons table by adding a new column (email) \n",
 				"4- Please enter  C to alter persons table by dropping email column \n",
@@ -120,7 +135,7 @@ public class Driver {
 				"11- Please enter J to start a transaction \n",
 				"12- Please enter K to client with name marwane buy all available cars \n",
 				"13- Please enter L to retrive info about client with name marwane and all his cars \"join statement\" \n",
-				"14- Please enter M to retrive info of all cars currently on service with owner info 'join multiple tables' \n"
+				"14- Please enter M to retrive info of all cars currently on service with owner info 'join multiple tables' \n" + ANSI_RESET
 		};
 		
 		String[] validInputarr = {"A","a", "A+", "a+" ,"B","b", "C", "c", "D", "d" , "E", "e" , "F", "f"
@@ -248,7 +263,7 @@ public class Driver {
 				LinkedList<Client> clients = (LinkedList<Client>) db.cache.get("clients");
 				
 				
-				for(int i=0 ; i < clients.size() ; i++) {
+				for(int i=0 ; i <  cars.length ; i++) {
 					
 					int ownerId = clients.get(i).getId();
 					

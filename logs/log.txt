@@ -1,0 +1,708 @@
+2022-01-07 18:13:49 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:22:12 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:22:12 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:22:12 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:31:41 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:31:41 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:31:42 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:31:42 INFO  revature.util.DataBase:139 - clients table created successfully
+2022-01-07 18:31:42 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:31:42 INFO  revature.util.DataBase:139 - cars table created successfully
+2022-01-07 18:31:42 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:31:42 INFO  revature.util.DataBase:139 - services table created successfully
+2022-01-07 18:31:42 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:34:52 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:34:52 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:34:53 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:34:53 INFO  revature.util.DataBase:139 - clients table created successfully
+2022-01-07 18:34:53 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:34:53 INFO  revature.util.DataBase:139 - cars table created successfully
+2022-01-07 18:34:53 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:34:53 INFO  revature.util.DataBase:139 - services table created successfully
+2022-01-07 18:34:53 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:35:07 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:35:07 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:35:07 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:35:07 INFO  revature.util.DataBase:139 - clients table created successfully
+2022-01-07 18:35:07 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:35:07 INFO  revature.util.DataBase:139 - cars table created successfully
+2022-01-07 18:35:07 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:35:07 INFO  revature.util.DataBase:139 - services table created successfully
+2022-01-07 18:35:07 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:39:11 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:39:11 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:39:12 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:39:12 INFO  revature.util.DataBase:139 - clients table created successfully
+2022-01-07 18:39:12 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:39:12 INFO  revature.util.DataBase:139 - cars table created successfully
+2022-01-07 18:39:12 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:39:12 INFO  revature.util.DataBase:139 - services table created successfully
+2022-01-07 18:39:12 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:39:49 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:39:49 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:39:49 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:39:49 INFO  revature.util.DataBase:139 - clients table created successfully
+2022-01-07 18:39:49 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:39:49 INFO  revature.util.DataBase:139 - cars table created successfully
+2022-01-07 18:39:49 INFO  revature.util.DataBase:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:39:49 INFO  revature.util.DataBase:139 - services table created successfully
+2022-01-07 18:39:49 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:53:38 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:53:38 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:53:38 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:53:39 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 18:53:39 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:53:39 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 18:53:39 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:53:39 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 18:53:39 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 18:54:28 INFO  revature.SQL.DDL:195 - Table altered successfully
+2022-01-07 18:57:38 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 18:57:38 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 18:57:38 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 18:57:38 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 18:57:38 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 18:57:38 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 18:57:38 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 18:57:38 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 18:57:38 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:28:28 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:28:28 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:28:29 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:28:29 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:28:29 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:28:29 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:28:29 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:28:29 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:28:29 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:28:29 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:28:29 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:29:13 INFO  revature.SQL.DDL:235 - truncate table cars
+2022-01-07 19:29:13 ERROR revature.SQL.DDL:246 - An SQL exception has been thrown while truncating cars check the stack trace to debug
+2022-01-07 19:29:13 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:29:13 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:30:42 INFO  revature.SQL.DDL:284 - truncate table cars CASCADE 
+2022-01-07 19:30:42 INFO  revature.SQL.DDL:292 - Table truncated successfully
+2022-01-07 19:30:42 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:30:42 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:31:21 INFO  revature.SQL.DDL:182 - alter table clients  ADD Email varchar(50) 
+2022-01-07 19:31:21 ERROR revature.SQL.DDL:197 - An SQL exception has been thrown while altering clients check the stack trace to debug
+2022-01-07 19:31:21 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:31:21 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:32:01 INFO  revature.SQL.DDL:385 - drop table  services CASCADE 
+2022-01-07 19:32:01 INFO  revature.SQL.DDL:395 - Table dropped successfully
+2022-01-07 19:32:01 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:32:01 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:33:28 INFO  revature.SQL.DDL:385 - drop table  services CASCADE 
+2022-01-07 19:33:28 ERROR revature.SQL.DDL:398 - An SQL exception has been thrown while droping services check the stack trace to debug
+2022-01-07 19:33:28 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:33:28 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:33:38 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:33:38 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:33:38 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:33:38 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:34:32 INFO  revature.SQL.DML:186 - INSERT INTO clients ( fisrt_name , last_name , age , approved )  
+VALUES  ( 'marwane' , 'khab' , 27 , true )  , 
+ ( 'adam' , 'jhon' , 18 , false )  , 
+ ( 'jhon' , 'adam' , 30 , true )  , 
+ ( 'messi' , 'leo' , 37 , true )  , 
+ ( 'ref' , 'nadal' , 32 , false )   returning  clients
+2022-01-07 19:34:32 INFO  revature.SQL.DML:200 - Objects has been added to DB
+2022-01-07 19:34:32 INFO  revature.SQL.DML:201 - [(61,marwane,khab,27,t,), (62,adam,jhon,18,f,), (63,jhon,adam,30,t,), (64,messi,leo,37,t,), (65,ref,nadal,32,f,)]
+2022-01-07 19:34:32 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:34:32 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:35:40 INFO  revature.SQL.DQL:123 - SELECT * FROM clients
+2022-01-07 19:35:40 INFO  revature.SQL.DQL:143 - returning data from clients
+2022-01-07 19:35:40 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 19:35:40 INFO  revature.SQL.DQL:73 - SELECT * FROM clients WHERE client_id =  55
+2022-01-07 19:35:40 INFO  revature.SQL.DQL:90 - Returning results for 55
+2022-01-07 19:39:00 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:39:00 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:39:00 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:39:00 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:39:00 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:39:00 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:39:00 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:39:00 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:39:00 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:39:06 INFO  revature.SQL.DQL:123 - SELECT * FROM clients
+2022-01-07 19:39:06 INFO  revature.SQL.DQL:143 - returning data from clients
+2022-01-07 19:39:06 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 19:39:14 INFO  revature.SQL.DML:186 - INSERT INTO cars ( car_model , color , price , owner )  
+VALUES  ( 'bmw' , 'white' , 25 , 51 )  , 
+ ( 'audi' , 'black' , 27 , 52 )  , 
+ ( 'ford' , 'blue' , 25 , 53 )  , 
+ ( 'benz' , 'white' , 30 , 54 )  , 
+ ( 'chevy' , 'grey' , 24 , 55 )  , 
+ ( 'toyota' , 'black' , 22 , 56 )  , 
+ ( 'honda' , 'white' , 24 , 57 )   returning  cars
+2022-01-07 19:41:23 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:41:23 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:41:24 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:41:24 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:41:24 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:41:24 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:41:24 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:41:24 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:41:24 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:42:09 INFO  revature.SQL.DML:186 - INSERT INTO clients ( fisrt_name , last_name , age , approved )  
+VALUES  ( 'marwane' , 'khab' , 27 , true )  , 
+ ( 'adam' , 'jhon' , 18 , false )  , 
+ ( 'jhon' , 'adam' , 30 , true )  , 
+ ( 'messi' , 'leo' , 37 , true )  , 
+ ( 'ref' , 'nadal' , 32 , false )   returning  clients
+2022-01-07 19:42:09 INFO  revature.SQL.DML:200 - Objects has been added to DB
+2022-01-07 19:42:09 INFO  revature.SQL.DML:201 - [(1,marwane,khab,27,t), (2,adam,jhon,18,f), (3,jhon,adam,30,t), (4,messi,leo,37,t), (5,ref,nadal,32,f)]
+2022-01-07 19:42:32 INFO  revature.SQL.DQL:123 - SELECT * FROM clients
+2022-01-07 19:42:32 INFO  revature.SQL.DQL:143 - returning data from clients
+2022-01-07 19:42:32 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 19:48:13 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:48:13 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:48:13 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:48:13 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:48:13 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:48:13 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:48:13 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:48:13 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:48:13 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:48:24 INFO  revature.SQL.DQL:123 - SELECT * FROM clients
+2022-01-07 19:48:24 INFO  revature.SQL.DQL:143 - returning data from clients
+2022-01-07 19:48:24 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 19:48:39 INFO  revature.SQL.DML:186 - INSERT INTO clients ( fisrt_name , last_name , age , approved )  
+VALUES  ( 'marwane' , 'khab' , 27 , true )  , 
+ ( 'adam' , 'jhon' , 18 , false )  , 
+ ( 'jhon' , 'adam' , 30 , true )  , 
+ ( 'messi' , 'leo' , 37 , true )  , 
+ ( 'ref' , 'nadal' , 32 , false )   returning  clients
+2022-01-07 19:48:39 INFO  revature.SQL.DML:200 - Objects has been added to DB
+2022-01-07 19:48:39 INFO  revature.SQL.DML:201 - [(6,marwane,khab,27,t), (7,adam,jhon,18,f), (8,jhon,adam,30,t), (9,messi,leo,37,t), (10,ref,nadal,32,f)]
+2022-01-07 19:49:02 INFO  revature.SQL.DQL:123 - SELECT * FROM clients
+2022-01-07 19:49:02 INFO  revature.SQL.DQL:143 - returning data from clients
+2022-01-07 19:49:02 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 19:49:05 INFO  revature.SQL.DML:186 - INSERT INTO cars ( car_model , color , price , owner )  
+VALUES  ( 'bmw' , 'white' , 25 , 1 )  , 
+ ( 'audi' , 'black' , 27 , 2 )  , 
+ ( 'ford' , 'blue' , 25 , 3 )  , 
+ ( 'benz' , 'white' , 30 , 4 )  , 
+ ( 'chevy' , 'grey' , 24 , 5 )  , 
+ ( 'toyota' , 'black' , 22 , 6 )  , 
+ ( 'honda' , 'white' , 24 , 7 )   returning  cars
+2022-01-07 19:49:05 INFO  revature.SQL.DML:200 - Objects has been added to DB
+2022-01-07 19:49:05 INFO  revature.SQL.DML:201 - [(1,bmw,white,25,1), (2,audi,black,27,2), (3,ford,blue,25,3), (4,benz,white,30,4), (5,chevy,grey,24,5), (6,toyota,black,22,6), (7,honda,white,24,7)]
+2022-01-07 19:49:18 INFO  revature.SQL.DML:306 - update cars set  color = 'red'  WHERE car_id =  10 returning cars
+2022-01-07 19:49:18 WARN  revature.SQL.DML:316 - row with id 10 don't exist in the table cars
+2022-01-07 19:50:02 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:50:02 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:50:02 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:50:02 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:50:02 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:50:02 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:50:02 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:50:02 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:50:02 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:50:22 INFO  revature.SQL.DQL:123 - SELECT * FROM clients
+2022-01-07 19:50:22 INFO  revature.SQL.DQL:143 - returning data from clients
+2022-01-07 19:50:22 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 19:50:31 INFO  revature.SQL.DQL:123 - SELECT * FROM cars
+2022-01-07 19:50:31 INFO  revature.SQL.DQL:143 - returning data from cars
+2022-01-07 19:50:31 INFO  revature.util.DataBase:218 - cars has been add to the cache 
+2022-01-07 19:50:31 INFO  revature.SQL.Transaction:154 - savepoint has been created 
+2022-01-07 19:50:31 INFO  revature.SQL.Transaction:174 - rollback to a savepoint has been invoked 
+2022-01-07 19:50:31 INFO  revature.SQL.Transaction:133 - Transaction  commited 
+2022-01-07 19:51:11 INFO  revature.SQL.DQL:174 - SELECT * FROM clients  where fisrt_name = 'marwane' 
+2022-01-07 19:51:11 INFO  revature.SQL.DQL:193 - returning data from clients
+2022-01-07 19:51:11 INFO  revature.SQL.DQL:193 - returning data from clients
+2022-01-07 19:51:11 INFO  revature.SQL.DQL:252 - result from this querry update cars set owner = 1where owner is null returning cars are :
+2022-01-07 19:52:01 INFO  revature.SQL.DQL:433 - SELECT * FROM  services AS j   
+ JOIN cars AS a  
+   On J.car = a.car_id 
+ JOIN clients AS b  
+   On J.client = b.client_id
+2022-01-07 19:52:01 INFO  revature.SQL.DQL:471 - row {owner=1, car_model=bmw, color=white, last_name=khab, client_id=1, approved=true, car=1, price=25, client=1, fisrt_name=marwane, id=1, car_id=1, age=27}
+2022-01-07 19:52:01 INFO  revature.SQL.DQL:471 - row {owner=2, car_model=audi, color=black, last_name=jhon, client_id=2, approved=false, car=2, price=27, client=2, fisrt_name=adam, id=2, car_id=2, age=18}
+2022-01-07 19:52:01 INFO  revature.SQL.DQL:471 - row {owner=3, car_model=ford, color=blue, last_name=adam, client_id=3, approved=true, car=3, price=25, client=3, fisrt_name=jhon, id=3, car_id=3, age=30}
+2022-01-07 19:52:01 INFO  revature.SQL.DQL:471 - row {owner=4, car_model=benz, color=white, last_name=leo, client_id=4, approved=true, car=4, price=30, client=4, fisrt_name=messi, id=4, car_id=4, age=37}
+2022-01-07 19:52:12 INFO  revature.SQL.DQL:359 - SELECT * FROM  cars AS a   
+ JOIN clients AS b  
+   On a.owner = b.client_id WHERE fisrt_name = 'marwane' 
+2022-01-07 19:52:12 INFO  revature.SQL.DQL:397 - row {owner=1, car_model=bmw, approved=true, color=white, price=25, last_name=khab, fisrt_name=marwane, car_id=1, client_id=1, age=27}
+2022-01-07 19:52:12 INFO  revature.SQL.DQL:397 - row {owner=6, car_model=toyota, approved=true, color=black, price=22, last_name=khab, fisrt_name=marwane, car_id=6, client_id=6, age=27}
+2022-01-07 19:57:40 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:57:40 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:57:41 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:57:41 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:57:41 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:57:41 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:57:41 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:57:41 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:57:41 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:57:56 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:57:56 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:57:56 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:57:56 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:57:56 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:57:56 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:57:56 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:57:56 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:57:56 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:58:10 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:58:10 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:58:10 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:58:10 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:58:10 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:58:10 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:58:10 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:58:10 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:58:10 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:58:23 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:58:23 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:58:23 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:58:23 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:58:23 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:58:23 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:58:23 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:58:23 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:58:23 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:58:48 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 19:58:48 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 19:58:48 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 19:58:48 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 19:58:48 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 19:58:48 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 19:58:48 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 19:58:48 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 19:58:48 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 19:58:54 INFO  revature.SQL.DML:186 - INSERT INTO clients ( fisrt_name , last_name , age , approved )  
+VALUES  ( 'marwane' , 'khab' , 27 , true )  , 
+ ( 'adam' , 'jhon' , 18 , false )  , 
+ ( 'jhon' , 'adam' , 30 , true )  , 
+ ( 'messi' , 'leo' , 37 , true )  , 
+ ( 'ref' , 'nadal' , 32 , false )   returning  clients
+2022-01-07 19:58:54 INFO  revature.SQL.DML:200 - Objects has been added to DB
+2022-01-07 19:58:54 INFO  revature.SQL.DML:201 - [(11,marwane,khab,27,t), (12,adam,jhon,18,f), (13,jhon,adam,30,t), (14,messi,leo,37,t), (15,ref,nadal,32,f)]
+2022-01-07 20:00:41 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 20:00:41 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 20:00:41 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 20:00:41 INFO  revature.SQL.DDL:139 - clients table created successfully
+2022-01-07 20:00:41 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 20:00:41 INFO  revature.SQL.DDL:139 - cars table created successfully
+2022-01-07 20:00:41 INFO  revature.SQL.DDL:128 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 20:00:41 INFO  revature.SQL.DDL:139 - services table created successfully
+2022-01-07 20:00:41 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 20:00:50 INFO  revature.SQL.DML:186 - INSERT INTO clients ( fisrt_name , last_name , age , approved )  
+VALUES  ( 'marwane' , 'khab' , 27 , true )  , 
+ ( 'adam' , 'jhon' , 18 , false )  , 
+ ( 'jhon' , 'adam' , 30 , true )  , 
+ ( 'messi' , 'leo' , 37 , true )  , 
+ ( 'ref' , 'nadal' , 32 , false )   returning  clients
+2022-01-07 20:00:50 INFO  revature.SQL.DML:200 - Objects has been added to DB
+2022-01-07 20:00:50 INFO  revature.SQL.DML:201 - [(16,marwane,khab,27,t), (17,adam,jhon,18,f), (18,jhon,adam,30,t), (19,messi,leo,37,t), (20,ref,nadal,32,f)]
+2022-01-07 20:17:39 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 20:17:39 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 20:17:40 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 20:17:40 INFO  revature.SQL.DDL:142 - clients table created successfully
+2022-01-07 20:17:40 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 20:17:40 INFO  revature.SQL.DDL:142 - cars table created successfully
+2022-01-07 20:17:40 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 20:17:40 INFO  revature.SQL.DDL:142 - services table created successfully
+2022-01-07 20:17:40 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 20:17:48 INFO  revature.SQL.DDL:239 - truncate table cars
+2022-01-07 20:17:48 ERROR revature.SQL.DDL:250 - [31mAn SQL exception has been thrown while truncating cars check the stack trace to debug[0m
+2022-01-07 20:18:06 INFO  revature.SQL.DDL:185 - alter table clients  ADD Email varchar(50) 
+2022-01-07 20:18:06 INFO  revature.SQL.DDL:197 - Table altered successfully
+2022-01-07 20:18:27 INFO  revature.SQL.DDL:185 - alter table clients  DROP COLUMN Email  
+2022-01-07 20:18:27 INFO  revature.SQL.DDL:197 - Table altered successfully
+2022-01-07 20:18:39 INFO  revature.SQL.DDL:392 - drop table  services CASCADE 
+2022-01-07 20:18:39 INFO  revature.SQL.DDL:402 - Table dropped successfully
+2022-01-07 20:18:52 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 20:18:52 INFO  revature.SQL.DDL:142 - services table created successfully
+2022-01-07 20:23:18 INFO  revature.util.DataBase:108 - Currently connected into development environment
+2022-01-07 20:23:18 INFO  revature.util.DataBase:109 - Pool of Connection established successfully
+2022-01-07 20:23:18 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS clients (
+client_id SERIAL PRIMARY KEY,
+ fisrt_name  varchar(50)  , 
+ last_name  varchar(50)  default 1  , 
+ age  INTEGER  NOT NULL  , 
+ approved  boolean  default  true    
+)
+2022-01-07 20:23:18 INFO  revature.SQL.DDL:142 - clients table created successfully
+2022-01-07 20:23:18 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS cars (
+car_id SERIAL PRIMARY KEY,
+ car_model  varchar(50)  , 
+ color  varchar(50)  default  'blue'   , 
+ price  INTEGER  NOT NULL  , 
+ owner  INTEGER  REFERENCES clients(client_id)  default null   
+)
+2022-01-07 20:23:18 INFO  revature.SQL.DDL:142 - cars table created successfully
+2022-01-07 20:23:18 INFO  revature.SQL.DDL:131 - CREATE TABLE  IF NOT EXISTS services (
+id SERIAL PRIMARY KEY,
+ car  INTEGER  REFERENCES cars(car_id)  , 
+ client  INTEGER  REFERENCES clients(client_id)   
+)
+2022-01-07 20:23:18 INFO  revature.SQL.DDL:142 - services table created successfully
+2022-01-07 20:23:18 INFO  revature.util.DataBase:60 -   Classes have been mapped into the database successfully 
+2022-01-07 20:23:21 INFO  revature.SQL.DML:191 - INSERT INTO clients ( fisrt_name , last_name , age , approved )  
+VALUES  ( 'marwane' , 'khab' , 27 , true )  , 
+ ( 'adam' , 'jhon' , 18 , false )  , 
+ ( 'jhon' , 'adam' , 30 , true )  , 
+ ( 'messi' , 'leo' , 37 , true )  , 
+ ( 'ref' , 'nadal' , 32 , false )   returning  clients
+2022-01-07 20:23:21 INFO  revature.SQL.DML:205 - Objects has been added to DB
+2022-01-07 20:23:21 INFO  revature.SQL.DML:206 - [(21,marwane,khab,27,t), (22,adam,jhon,18,f), (23,jhon,adam,30,t), (24,messi,leo,37,t), (25,ref,nadal,32,f)]
+2022-01-07 20:23:52 INFO  revature.SQL.DQL:126 - SELECT * FROM clients
+2022-01-07 20:23:52 INFO  revature.SQL.DQL:146 - returning data from clients
+2022-01-07 20:23:52 INFO  revature.util.DataBase:218 - clients has been add to the cache 
+2022-01-07 20:24:19 INFO  revature.SQL.DML:191 - INSERT INTO cars ( car_model , color , price , owner )  
+VALUES  ( 'bmw' , 'white' , 25 , 1 )  , 
+ ( 'audi' , 'black' , 27 , 2 )  , 
+ ( 'ford' , 'blue' , 25 , 3 )  , 
+ ( 'benz' , 'white' , 30 , 4 )  , 
+ ( 'chevy' , 'grey' , 24 , 5 )  , 
+ ( 'toyota' , 'black' , 22 , 6 )  , 
+ ( 'honda' , 'white' , 24 , 7 )   returning  cars
+2022-01-07 20:24:19 INFO  revature.SQL.DML:205 - Objects has been added to DB
+2022-01-07 20:24:19 INFO  revature.SQL.DML:206 - [(8,bmw,white,25,1), (9,audi,black,27,2), (10,ford,blue,25,3), (11,benz,white,30,4), (12,chevy,grey,24,5), (13,toyota,black,22,6), (14,honda,white,24,7)]
+2022-01-07 20:24:40 INFO  revature.SQL.DML:311 - update cars set  color = 'red'  WHERE car_id =  10 returning cars
+2022-01-07 20:24:40 INFO  revature.SQL.DML:317 - row with id 10has been updated in the table cars
+2022-01-07 20:24:48 INFO  revature.SQL.DQL:126 - SELECT * FROM cars
+2022-01-07 20:24:48 INFO  revature.SQL.DQL:146 - returning data from cars
+2022-01-07 20:24:48 INFO  revature.util.DataBase:218 - cars has been add to the cache 
+2022-01-07 20:24:48 INFO  revature.SQL.Transaction:157 - savepoint has been created 
+2022-01-07 20:24:48 INFO  revature.SQL.Transaction:177 - rollback to a savepoint has been invoked 
+2022-01-07 20:24:48 INFO  revature.SQL.Transaction:136 - Transaction  commited 
+2022-01-07 20:24:48 INFO  revature.SQL.Transaction:119 - Transaction ended
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:178 - SELECT * FROM clients  where fisrt_name = 'marwane' 
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:197 - returning data from clients
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:197 - returning data from clients
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:197 - returning data from clients
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:197 - returning data from clients
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:197 - returning data from clients
+2022-01-07 20:24:56 INFO  revature.SQL.DQL:257 - result from this querry update cars set owner = 1where owner is null returning cars are :
+2022-01-07 20:25:21 INFO  revature.SQL.DQL:364 - SELECT * FROM  cars AS a   
+ JOIN clients AS b  
+   On a.owner = b.client_id WHERE fisrt_name = 'marwane' 
+2022-01-07 20:25:21 INFO  revature.SQL.DQL:402 - row {owner=1, car_model=bmw, approved=true, color=white, price=25, last_name=khab, fisrt_name=marwane, car_id=1, client_id=1, age=27}
+2022-01-07 20:25:21 INFO  revature.SQL.DQL:402 - row {owner=6, car_model=toyota, approved=true, color=black, price=22, last_name=khab, fisrt_name=marwane, car_id=6, client_id=6, age=27}
+2022-01-07 20:25:21 INFO  revature.SQL.DQL:402 - row {owner=1, car_model=bmw, approved=true, color=white, price=25, last_name=khab, fisrt_name=marwane, car_id=8, client_id=1, age=27}
+2022-01-07 20:25:21 INFO  revature.SQL.DQL:402 - row {owner=6, car_model=toyota, approved=true, color=black, price=22, last_name=khab, fisrt_name=marwane, car_id=13, client_id=6, age=27}
+2022-01-07 20:25:35 INFO  revature.SQL.DQL:438 - SELECT * FROM  services AS j   
+ JOIN cars AS a  
+   On J.car = a.car_id 
+ JOIN clients AS b  
+   On J.client = b.client_id
+2022-01-07 20:25:35 INFO  revature.SQL.DQL:477 - row {owner=1, car_model=bmw, color=white, last_name=khab, client_id=1, approved=true, car=1, price=25, client=1, fisrt_name=marwane, id=1, car_id=1, age=27}
+2022-01-07 20:25:35 INFO  revature.SQL.DQL:477 - row {owner=2, car_model=audi, color=black, last_name=jhon, client_id=2, approved=false, car=2, price=27, client=2, fisrt_name=adam, id=2, car_id=2, age=18}
+2022-01-07 20:25:35 INFO  revature.SQL.DQL:477 - row {owner=3, car_model=ford, color=blue, last_name=adam, client_id=3, approved=true, car=3, price=25, client=3, fisrt_name=jhon, id=3, car_id=3, age=30}
+2022-01-07 20:25:35 INFO  revature.SQL.DQL:477 - row {owner=4, car_model=benz, color=white, last_name=leo, client_id=4, approved=true, car=4, price=30, client=4, fisrt_name=messi, id=4, car_id=4, age=37}

@@ -44,7 +44,7 @@ public class Car {
 		
 	
 	
-	@ConstructorProperties(value = { "car_id",  "car_model" , "color" , "doors", "owner" })
+	@ConstructorProperties(value = { "car_id",  "car_model" , "color" , "price", "owner" })
 	public Car(int id, String model, String color, int price, Integer owner) {
 		this.id = id;
 		this.model = model;
